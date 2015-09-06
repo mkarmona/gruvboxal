@@ -23,15 +23,15 @@ function! airline#themes#gruvboxal#refresh()
   let g:airline#themes#gruvboxal#palette.normal.airline_warning = warning_group
   let g:airline#themes#gruvboxal#palette.normal_modified.airline_warning = warning_group
 
-  let s:I1 = airline#themes#get_highlight2(['Normal', 'bg'], ['Identifier', 'fg'])
+  let s:I1 = s:N1
   let s:I2 = s:N2
-  let s:I3 = airline#themes#get_highlight2(['Normal', 'fg'], ['StatusLineNC', 'fg'])
+  let s:I3 = s:N3
   let g:airline#themes#gruvboxal#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
   let g:airline#themes#gruvboxal#palette.insert_modified = g:airline#themes#gruvboxal#palette.normal_modified
   let g:airline#themes#gruvboxal#palette.insert.airline_warning = g:airline#themes#gruvboxal#palette.normal.airline_warning
   let g:airline#themes#gruvboxal#palette.insert_modified.airline_warning = g:airline#themes#gruvboxal#palette.normal_modified.airline_warning
 
-  let s:R1 = airline#themes#get_highlight2(['Normal', 'bg'], ['Structure', 'fg'])
+  let s:R1 = s:I1
   let s:R2 = s:I2
   let s:R3 = s:I3
   let g:airline#themes#gruvboxal#palette.replace = airline#themes#generate_color_map(s:R1, s:R2, s:R3)
@@ -39,11 +39,11 @@ function! airline#themes#gruvboxal#refresh()
   let g:airline#themes#gruvboxal#palette.replace.airline_warning = g:airline#themes#gruvboxal#palette.normal.airline_warning
   let g:airline#themes#gruvboxal#palette.replace_modified.airline_warning = g:airline#themes#gruvboxal#palette.normal_modified.airline_warning
 
-  let s:V1 = airline#themes#get_highlight2(['Normal', 'bg'], ['Question', 'fg'])
+  let s:V1 = s:N1
   let s:V2 = s:N2
-  let s:V3 = airline#themes#get_highlight2(['Normal', 'bg'], ['TabLine', 'fg'])
+  let s:V3 = s:N3
   let g:airline#themes#gruvboxal#palette.visual = airline#themes#generate_color_map(s:V1, s:V2, s:V3)
-  let g:airline#themes#gruvboxal#palette.visual_modified = { 'airline_c': [ s:V3[0], '', s:V3[2], '', '' ] }
+  let g:airline#themes#gruvboxal#palette.visual_modified = g:airline#themes#gruvboxal#palette.normal_modified
   let g:airline#themes#gruvboxal#palette.visual.airline_warning = g:airline#themes#gruvboxal#palette.normal.airline_warning
   let g:airline#themes#gruvboxal#palette.visual_modified.airline_warning = g:airline#themes#gruvboxal#palette.normal_modified.airline_warning
 
