@@ -11,7 +11,6 @@ let g:airline#themes#gruvboxal#palette = {}
 function! airline#themes#gruvboxal#refresh()
 
   let M0 = airline#themes#get_highlight('Identifier')
-  let accents_group = airline#themes#get_highlight('Special')
   let modified_group = [M0[0], '', M0[2], '', '']
   let warning_group = airline#themes#get_highlight2(['Normal', 'bg'], ['Question', 'fg'])
 
@@ -51,6 +50,7 @@ function! airline#themes#gruvboxal#refresh()
   let g:airline#themes#gruvboxal#palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, s:IA)
   let g:airline#themes#gruvboxal#palette.inactive_modified = { 'airline_c': modified_group }
 
+  let accents_group = s:N1
   let g:airline#themes#gruvboxal#palette.accents = { 'red': accents_group }
 
   let s:TF = airline#themes#get_highlight2(['Normal', 'bg'], ['Normal', 'bg'])
