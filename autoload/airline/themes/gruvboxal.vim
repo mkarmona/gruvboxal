@@ -14,9 +14,9 @@ function! airline#themes#gruvboxal#refresh()
   let modified_group = [M0[0], '', M0[2], '', '']
   let warning_group = airline#themes#get_highlight2(['Normal', 'bg'], ['Question', 'fg'])
 
-  let s:N1 = airline#themes#get_highlight2(['Normal', 'bg'], ['Normal', 'fg'])
-  let s:N2 = airline#themes#get_highlight2(['Normal', 'bg'], ['Normal', 'fg'])
-  let s:N3 = airline#themes#get_highlight2(['Normal', 'bg'], ['Normal', 'fg'])
+  let s:N1 = airline#themes#get_highlight2(['DiffAdd', 'bg'], ['DiffAdd', 'fg'])
+  let s:N2 = airline#themes#get_highlight2(['DiffAdd', 'bg'], ['DiffAdd', 'fg'])
+  let s:N3 = airline#themes#get_highlight2(['DiffAdd', 'bg'], ['DiffAdd', 'fg'])
   "let s:N3 = airline#themes#get_highlight2(['Normal', 'bg'], ['StatusLineNc', 'bg'])
   "let s:N3 = airline#themes#get_highlight2(['Normal', 'bg'], ['DiffChange', 'fg'])
   let g:airline#themes#gruvboxal#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
